@@ -1,0 +1,2 @@
+const styles = { CRITICAL: 'bg-red-500/20 text-red-300 ring-red-400/30', HIGH: 'bg-orange-500/20 text-orange-300 ring-orange-400/30', MEDIUM: 'bg-yellow-400/15 text-yellow-200 ring-yellow-300/30', LOW: 'bg-emerald-500/15 text-emerald-300 ring-emerald-400/30', UNKNOWN: 'bg-slate-500/20 text-slate-300 ring-slate-400/30' }
+export default function SeverityBadge({ severity = 'UNKNOWN' }) { return <span className={`rounded-full px-3 py-1 text-xs font-bold tracking-wider ring-1 ${styles[severity] || styles.UNKNOWN}`}>{severity}</span> }
